@@ -8,8 +8,12 @@ function AuthPage(){
 
     return (
         <AuthLayout>
-            {isLogin ? <LoginForm/> : <RegisterForm/>}
+            {isLogin 
+            ? <LoginForm onSwitch={()=>setIsLogin(false)}/> 
+            : <RegisterForm onSwitch={()=>setIsLogin(true)}/>}
         </AuthLayout>
+        
+           
     )
 }
 
