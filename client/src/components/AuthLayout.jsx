@@ -1,29 +1,16 @@
-function AuthLayout(){
+function AuthLayout({ children }) {
     return(
-        <div className="flex flex-row">
-            <div className="w-1/2 h-screen bg-bg-surface flex flex-col justify-center px-8 gap-2">
-                <h2 className="text-text-primary text-3xl font-bold">Jobtrail</h2>
-                <h3 className="text-text-white text-4xl italic">Track every step of your journey to your dream job.</h3>
-                <p className="text-text-muted">A calm, organized home for every application — no more spreadsheets.</p>
+        <div className="flex h-screen">
+        {/* left panel */}
+            <div className="flex flex-col w-1/2 bg-bg-surface justify-center px-12 py-8">
+                <h1 className="text-accent text-3xl font-black">JobTrail</h1>
+                <h2 className="text-text-white text-4xl mt-4">Track every step of your journey to your dream job.</h2>
+                <p className="text-text-secondary mt-2 ">A calm, organized home for every jobs application 
+                    <span className="text-text-primary font-medium italic"> - no more spreadsheets.</span></p>
             </div>
-            <div className="w-1/2 h-screen bg-bg-base flex flex-col justify-center px-8 gap-4">
-                <div>
-                    <h2 className="text-text-white font-bold text-3xl">JobTrail</h2>
-                    <p className="text-text-muted">Welcome back. Sign in to continue.</p>
-                </div>
-                <div>
-                    <form className=" flex flex-col gap-4">
-                        <input className="border-2 rounded p-2 border-white text-text-secondary" 
-                        placeholder="ex. you@email.com"/>
-                        <input className="border-2 rounded p-2 border-white text-text-secondary" 
-                        placeholder="******"/>
-                        <button className="text-black border-accent-hover bg-accent-hover font-medium border-2 p-2 rounded w-full
-                        cursor-pointer">Sign In</button>
-                    </form>
-                </div>
-                <div>
-                    <p className="text-text-white"> Don't have an account? <span className="text-text-primary cursor-pointer ">Create one</span></p>
-                </div>
+        {/* right panel */}
+            <div className="w-1/2 bg-bg-base flex flex-col justify-center px-12">
+                {children}
             </div>
         </div>
     )
