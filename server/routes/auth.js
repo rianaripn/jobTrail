@@ -49,14 +49,11 @@ router.post('/login',async(req,res)=>{
             process.env.JWT_SECRET,
             {expiresIn:'1d'}
         )
-        return res.status(200).json({message:`User with email ${email} logged in`})
+        return res.status(200).json({message:'Login successful', token})
     } else {
         return res.status(400).json({message:'Invalid credentials'})
     }
 
-
-
-    
 })
 
 export default router;
