@@ -25,7 +25,7 @@ function LoginForm({onSwitch}){
             navigate('/dashboard')
 
         }catch(err){
-            console.log(err.response.data)
+            console.log(err.response?.data)
             setError('Email or password is incorrect')
         }
 
