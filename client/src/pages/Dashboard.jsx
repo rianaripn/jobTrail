@@ -3,8 +3,21 @@ import api from '../api/axios.js'
 import Sidebar from '../components/Sidebar.jsx'
 import StatsCard from '../components/StatsCard.jsx'
 
-function Dashboard({title, value, color}){
+function Dashboard(){
     const [jobs, setJobs] = useState([])
+
+    const activeJobs = jobs.filter(job=>{
+        return job.status !== 'rejected' && job.status !== 'offering'
+    }).length
+
+    const offersJobs = jobs.filter(job=>{
+        return job.status === 'offering'
+    }).length
+
+    const rejectJobs = jobs.filter(job=>{
+        return job.status === 'rejected'
+    }).length
+
 
     useEffect(()=>{
         const fetchJobs = async()=>{
@@ -28,19 +41,19 @@ function Dashboard({title, value, color}){
                     />
                     <StatsCard
                         title="Active"
-                        value="0"
+                        value={activeJobs}
                         color="border-l-blue-400"
                         colorAccent="text-blue-400"
                     />
                     <StatsCard
                         title="Offers"
-                        value="0"
+                        value={offersJobs}
                         color="border-l-green-400"
                         colorAccent="text-green-400"
                     />
                     <StatsCard
                         title="Rejected"
-                        value="0"
+                        value={rejectJobs}
                         color="border-l-red-400"
                         colorAccent="text-red-400"
                     />
