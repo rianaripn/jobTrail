@@ -16,7 +16,6 @@ function RegisterForm({onSwitch}){
 
         if(!fullname || !email || !password){
             setError('Please fill in all fields')
-            return
         }
 
         if(password.length<6){
