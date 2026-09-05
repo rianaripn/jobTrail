@@ -10,7 +10,7 @@ function Sidebar(){
         navigate('/')
     }
     return(
-        <div className="bg-bg-surface min-w-64 h-screen flex flex-col gap-4 border-r border-border">
+        <div className="bg-bg-surface min-w-1/4 h-screen flex flex-col gap-4 border-r border-border">
             <div className="flex gap-3 items-center pl-6 py-3 pb-4 border-b border-border">
                 <h1 className="font-bold bg-accent px-2 py-1 rounded-lg text-sm">J</h1>
                 <h2 className="font-bold  text-text-primary cursor-pointer">JobTrail</h2>

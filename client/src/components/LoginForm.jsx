@@ -63,7 +63,7 @@ function LoginForm({onSwitch}){
                 className="bg-accent text-base rounded-xl text-shadow-text-secondary text-black p-2 cursor-pointer"
             >
                 Submit
-            </button>
+            </button> 
             <p className="text-text-secondary text-sm">
                 Dont have an account? {' '}
                 <span 
