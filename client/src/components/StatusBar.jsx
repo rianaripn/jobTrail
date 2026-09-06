@@ -12,6 +12,6 @@ function StatusBar({label,color,percentage,count}){
         </div>
     )
     
-}
+} 
 
 export default StatusBar
